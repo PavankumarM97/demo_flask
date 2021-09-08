@@ -16,4 +16,13 @@ class Article(db.Model):
     author_name = db.Column(db.String, nullable=False)
     article_name = db.Column(db.String, nullable=False)
 
+class User(object):
+    def __init__(self, id, username, password):
+        self.id = id
+        self.username = username
+        self.password = password
+
+    def __str__(self):
+        return "User(id='%s')" % self.id
+
 
